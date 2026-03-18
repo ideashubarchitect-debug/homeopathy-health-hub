@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#method", label: "The Method", isAnchor: true },
   { href: "#conditions", label: "Conditions", isAnchor: true },
   { href: "#testimonials", label: "Testimonials", isAnchor: true },
-  { href: "/about", label: "Dr. Geeta", isAnchor: false },
+  { href: "/about", label: "Geeta", isAnchor: false },
   { href: "#clinic", label: "Calgary Clinic", isAnchor: true },
 ];
 

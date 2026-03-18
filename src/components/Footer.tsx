@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <a href="#method" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">The Method</a>
-              <Link to="/about" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Dr. Geeta</Link>
+              <Link to="/about" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Geeta</Link>
               <a href="#clinic" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Calgary Clinic</a>
               <Link to="/privacy" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>

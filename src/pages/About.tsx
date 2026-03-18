@@ -19,11 +19,13 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Image */}
             <div className="relative">
-              <img
-                src={drGeeta}
-                alt="Dr. Geeta — Clinical Homeopath"
-                className="w-full max-w-md mx-auto lg:mx-0 object-cover shadow-lg"
-              />
+              <div className="w-full max-w-md mx-auto lg:mx-0 aspect-[3/4] overflow-hidden shadow-lg">
+                <img
+                  src={drGeeta}
+                  alt="Geeta — Clinical Homeopath"
+                  className="w-full h-full object-cover object-top scale-125"
+                />
+              </div>
               <div className="mt-6 text-center lg:text-left">
                 <p className="font-mono-ui text-xs uppercase tracking-[0.2em] text-muted-foreground">
                   Clinical Homeopathy
@@ -37,7 +39,7 @@ const About = () => {
                 Meet Your Homeopath
               </p>
               <h1 className="font-display text-4xl lg:text-5xl tracking-[-0.02em] text-foreground mb-2">
-                Dr. Geeta
+                Geeta
               </h1>
               <p className="font-mono-ui text-sm text-muted-foreground mb-8">
                 BHMS, RAHom
@@ -65,7 +67,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent hover:text-accent-foreground border border-primary transition-all duration-200"
                 >
-                  Book a Consultation with Dr. Geeta
+                  Book a Consultation with Geeta
                 </a>
               </div>
             </div>
