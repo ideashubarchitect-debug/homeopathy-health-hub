@@ -19,11 +19,13 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Image */}
             <div className="relative">
-              <img
-                src={drGeeta}
-                alt="Dr. Geeta — Clinical Homeopath"
-                className="w-full max-w-md mx-auto lg:mx-0 object-cover shadow-lg"
-              />
+              <div className="w-full max-w-md mx-auto lg:mx-0 aspect-[3/4] overflow-hidden shadow-lg">
+                <img
+                  src={drGeeta}
+                  alt="Geeta — Clinical Homeopath"
+                  className="w-full h-full object-cover object-top scale-125"
+                />
+              </div>
               <div className="mt-6 text-center lg:text-left">
                 <p className="font-mono-ui text-xs uppercase tracking-[0.2em] text-muted-foreground">
                   Clinical Homeopathy
