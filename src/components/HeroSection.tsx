@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap gap-4">
             <a
               href="#consultation"
-              className="px-8 py-4 bg-foreground text-background text-sm font-body font-medium tracking-wide border border-foreground hover:bg-primary hover:border-primary transition-all duration-200"
+              className="px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide border border-primary hover:bg-accent hover:border-accent transition-all duration-200"
             >
               Online Consultation
             </a>

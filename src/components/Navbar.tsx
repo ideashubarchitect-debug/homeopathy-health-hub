@@ -34,7 +34,7 @@ const Navbar = () => {
             <span className="font-mono-ui text-xs text-muted-foreground">587-938-0600</span>
             <a
               href="#contact"
-              className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-foreground transition-all duration-200"
+              className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent transition-all duration-200"
             >
               Book Online
             </a>
