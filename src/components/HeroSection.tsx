@@ -22,10 +22,12 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="#consultation"
+              href="https://calendly.com/naazhomeowellness/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide border border-primary hover:bg-accent hover:border-accent transition-all duration-200"
             >
-              Online Consultation
+              Book Consultation
             </a>
             <a
               href="#clinic"

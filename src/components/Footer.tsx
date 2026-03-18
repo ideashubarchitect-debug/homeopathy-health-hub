@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import mainLogo from "@/assets/main-logo.jpeg";
 
 const Footer = () => {
@@ -35,8 +36,10 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <a href="#method" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">The Method</a>
-              <a href="#consultation" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Online Consultation</a>
+              <Link to="/about" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Dr. Geeta</Link>
               <a href="#clinic" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Calgary Clinic</a>
+              <Link to="/privacy" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>
             </div>
           </div>
 
