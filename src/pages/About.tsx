@@ -39,7 +39,7 @@ const About = () => {
                 Meet Your Homeopath
               </p>
               <h1 className="font-display text-4xl lg:text-5xl tracking-[-0.02em] text-foreground mb-2">
-                Dr. Geeta
+                Geeta
               </h1>
               <p className="font-mono-ui text-sm text-muted-foreground mb-8">
                 BHMS, RAHom
