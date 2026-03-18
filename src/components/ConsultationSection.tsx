@@ -24,10 +24,12 @@ const ConsultationSection = () => {
               we provide thorough case analysis and precise constitutional prescribing.
             </p>
             <a
-              href="tel:5879380600"
+              href="https://calendly.com/naazhomeowellness/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-primary-foreground text-foreground text-sm font-body font-medium tracking-wide border border-primary-foreground/20 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
             >
-              Schedule Consultation — 587-938-0600
+              Book on Calendly
             </a>
           </div>
 
