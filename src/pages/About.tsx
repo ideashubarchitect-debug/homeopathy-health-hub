@@ -67,7 +67,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent hover:text-accent-foreground border border-primary transition-all duration-200"
                 >
-                  Book a Consultation with Dr. Geeta
+                  Book a Consultation with Geeta
                 </a>
               </div>
             </div>
