@@ -14,7 +14,141 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      intake_submissions: {
+        Row: {
+          address: string | null
+          age: string | null
+          anxiety_triggers: string | null
+          appetite: string | null
+          childhood_diseases: string | null
+          complaint_associated: string | null
+          complaint_causation: string | null
+          complaint_duration: string | null
+          complaint_frequency: string | null
+          complaint_intensity: string | null
+          complaint_location: string | null
+          complaint_onset: string | null
+          complaint_sensation: string | null
+          complaint_treatment_tried: string | null
+          consent_given: boolean
+          consultation_type: string | null
+          created_at: string
+          current_medications: string | null
+          date_of_birth: string | null
+          email: string
+          emergency_contact: string | null
+          family_history: string | null
+          fears_phobias: string | null
+          food_cravings: string | null
+          full_name: string
+          gender: string | null
+          id: string
+          known_allergies: string | null
+          main_complaint: string
+          marital_status: string | null
+          modalities: Json | null
+          modality_notes: string | null
+          occupation: string | null
+          patient_signature: string
+          perspiration: string | null
+          phone: string
+          previous_illnesses: string | null
+          referred_by: string | null
+          research_opt_out: boolean
+          signed_date: string
+          sleep_quality: string | null
+          thirst: string | null
+        }
+        Insert: {
+          address?: string | null
+          age?: string | null
+          anxiety_triggers?: string | null
+          appetite?: string | null
+          childhood_diseases?: string | null
+          complaint_associated?: string | null
+          complaint_causation?: string | null
+          complaint_duration?: string | null
+          complaint_frequency?: string | null
+          complaint_intensity?: string | null
+          complaint_location?: string | null
+          complaint_onset?: string | null
+          complaint_sensation?: string | null
+          complaint_treatment_tried?: string | null
+          consent_given?: boolean
+          consultation_type?: string | null
+          created_at?: string
+          current_medications?: string | null
+          date_of_birth?: string | null
+          email: string
+          emergency_contact?: string | null
+          family_history?: string | null
+          fears_phobias?: string | null
+          food_cravings?: string | null
+          full_name: string
+          gender?: string | null
+          id?: string
+          known_allergies?: string | null
+          main_complaint: string
+          marital_status?: string | null
+          modalities?: Json | null
+          modality_notes?: string | null
+          occupation?: string | null
+          patient_signature: string
+          perspiration?: string | null
+          phone: string
+          previous_illnesses?: string | null
+          referred_by?: string | null
+          research_opt_out?: boolean
+          signed_date?: string
+          sleep_quality?: string | null
+          thirst?: string | null
+        }
+        Update: {
+          address?: string | null
+          age?: string | null
+          anxiety_triggers?: string | null
+          appetite?: string | null
+          childhood_diseases?: string | null
+          complaint_associated?: string | null
+          complaint_causation?: string | null
+          complaint_duration?: string | null
+          complaint_frequency?: string | null
+          complaint_intensity?: string | null
+          complaint_location?: string | null
+          complaint_onset?: string | null
+          complaint_sensation?: string | null
+          complaint_treatment_tried?: string | null
+          consent_given?: boolean
+          consultation_type?: string | null
+          created_at?: string
+          current_medications?: string | null
+          date_of_birth?: string | null
+          email?: string
+          emergency_contact?: string | null
+          family_history?: string | null
+          fears_phobias?: string | null
+          food_cravings?: string | null
+          full_name?: string
+          gender?: string | null
+          id?: string
+          known_allergies?: string | null
+          main_complaint?: string
+          marital_status?: string | null
+          modalities?: Json | null
+          modality_notes?: string | null
+          occupation?: string | null
+          patient_signature?: string
+          perspiration?: string | null
+          phone?: string
+          previous_illnesses?: string | null
+          referred_by?: string | null
+          research_opt_out?: boolean
+          signed_date?: string
+          sleep_quality?: string | null
+          thirst?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
