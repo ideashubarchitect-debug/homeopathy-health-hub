@@ -8,6 +8,8 @@ const navLinks = [
   { href: "#conditions", label: "Conditions", isAnchor: true },
   { href: "#testimonials", label: "Testimonials", isAnchor: true },
   { href: "/about", label: "Geeta", isAnchor: false },
+  { href: "#pricing", label: "Pricing", isAnchor: true },
+  { href: "/intake", label: "Intake Form", isAnchor: false },
   { href: "#clinic", label: "Calgary Clinic", isAnchor: true },
 ];
 
