@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-image.jpg";
+import BookingDialog from "./BookingDialog";
 
 const HeroSection = () => {
   return (
@@ -21,14 +22,14 @@ const HeroSection = () => {
             We combine the 200-year science of homeopathy with modern telehealth to deliver precise, individualized care — whether you visit our Calgary clinic or consult from home.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="https://calendly.com/naazhomeowellness/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide border border-primary hover:bg-accent hover:border-accent transition-all duration-200"
-            >
-              Book Consultation
-            </a>
+            <BookingDialog>
+              <button
+                type="button"
+                className="px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide border border-primary hover:bg-accent hover:border-accent transition-all duration-200"
+              >
+                Book Consultation
+              </button>
+            </BookingDialog>
             <a
               href="#clinic"
               className="px-8 py-4 bg-transparent text-foreground text-sm font-body font-medium tracking-wide border border-foreground/20 hover:border-foreground transition-all duration-200"

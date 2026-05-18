@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import headerLogo from "@/assets/header-logo.jpeg";
+import BookingDialog from "./BookingDialog";
 
 const navLinks = [
   { href: "#method", label: "The Method", isAnchor: true },
@@ -13,7 +14,7 @@ const navLinks = [
   { href: "#clinic", label: "Calgary Clinic", isAnchor: true },
 ];
 
-const CALENDLY_URL = "https://calendly.com/naazhomeowellness/30min";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -42,14 +43,14 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center gap-6">
             <span className="font-mono-ui text-xs text-muted-foreground">587-938-0600</span>
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent transition-all duration-200"
-            >
-              Book Online
-            </a>
+            <BookingDialog>
+              <button
+                type="button"
+                className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent transition-all duration-200"
+              >
+                Book Online
+              </button>
+            </BookingDialog>
           </div>
 
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground" aria-label="Toggle menu">
@@ -74,15 +75,15 @@ const Navbar = () => {
             )}
             <div className="pt-4 border-t border-border">
               <a href="tel:5879380600" className="block font-mono-ui text-sm text-muted-foreground mb-3">587-938-0600</a>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-                className="inline-block px-6 py-3 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide"
-              >
-                Book Online
-              </a>
+              <BookingDialog>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="inline-block px-6 py-3 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide"
+                >
+                  Book Online
+                </button>
+              </BookingDialog>
             </div>
           </div>
         </div>
