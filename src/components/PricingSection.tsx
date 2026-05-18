@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
+import BookingDialog from "./BookingDialog";
 
-const CALENDLY_URL = "https://calendly.com/naazhomeowellness/30min";
+type ConsultationType = "acute-initial" | "acute-followup" | "chronic-initial" | "chronic-followup";
 
 const tiers = [
   {
