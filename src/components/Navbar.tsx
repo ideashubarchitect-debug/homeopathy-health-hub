@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#clinic", label: "Calgary Clinic", isAnchor: true },
 ];
 
-const CALENDLY_URL = "https://calendly.com/naazhomeowellness/30min";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
