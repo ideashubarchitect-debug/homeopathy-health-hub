@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import headerLogo from "@/assets/header-logo.jpeg";
+import BookingDialog from "./BookingDialog";
 
 const navLinks = [
   { href: "#method", label: "The Method", isAnchor: true },
