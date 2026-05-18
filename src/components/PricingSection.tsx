@@ -3,7 +3,15 @@ import BookingDialog from "./BookingDialog";
 
 type ConsultationType = "acute-initial" | "acute-followup" | "chronic-initial" | "chronic-followup";
 
-const tiers = [
+const tiers: Array<{
+  name: string;
+  price: number;
+  duration: string;
+  description: string;
+  includes: string[];
+  featured: boolean;
+  type: ConsultationType;
+}> = [
   {
     name: "Initial Acute Case",
     price: 60,
@@ -18,6 +26,7 @@ const tiers = [
       "Remedy prescription",
     ],
     featured: false,
+    type: "acute-initial",
   },
   {
     name: "Acute Follow-up",
@@ -30,6 +39,7 @@ const tiers = [
       "Remedy adjustment",
     ],
     featured: false,
+    type: "acute-followup",
   },
   {
     name: "Chronic Case Initial",
@@ -46,6 +56,7 @@ const tiers = [
       "Remedy prescription",
     ],
     featured: true,
+    type: "chronic-initial",
   },
   {
     name: "Chronic Follow-up",
@@ -58,6 +69,7 @@ const tiers = [
       "Treatment plan update",
     ],
     featured: false,
+    type: "chronic-followup",
   },
 ];
 
