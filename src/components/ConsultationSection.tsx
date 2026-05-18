@@ -24,14 +24,14 @@ const ConsultationSection = () => {
               Whether you're managing a chronic condition or seeking preventive wellness,
               we provide thorough case analysis and precise constitutional prescribing.
             </p>
-            <a
-              href="https://calendly.com/naazhomeowellness/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-primary-foreground text-foreground text-sm font-body font-medium tracking-wide border border-primary-foreground/20 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-            >
-              Book on Calendly
-            </a>
+            <BookingDialog>
+              <button
+                type="button"
+                className="inline-block px-8 py-4 bg-primary-foreground text-foreground text-sm font-body font-medium tracking-wide border border-primary-foreground/20 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+              >
+                Book Consultation
+              </button>
+            </BookingDialog>
           </div>
 
           <div className="space-y-6">
