@@ -1,4 +1,5 @@
 import { Video, FileText, Clock } from "lucide-react";
+import BookingDialog from "./BookingDialog";
 
 const steps = [
   { icon: FileText, label: "Complete Intake Form", desc: "Share your health history and current concerns" },
