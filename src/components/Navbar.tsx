@@ -75,15 +75,15 @@ const Navbar = () => {
             )}
             <div className="pt-4 border-t border-border">
               <a href="tel:5879380600" className="block font-mono-ui text-sm text-muted-foreground mb-3">587-938-0600</a>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-                className="inline-block px-6 py-3 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide"
-              >
-                Book Online
-              </a>
+              <BookingDialog>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="inline-block px-6 py-3 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide"
+                >
+                  Book Online
+                </button>
+              </BookingDialog>
             </div>
           </div>
         </div>
