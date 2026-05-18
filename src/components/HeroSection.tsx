@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-image.jpg";
+import BookingDialog from "./BookingDialog";
 
 const HeroSection = () => {
   return (
