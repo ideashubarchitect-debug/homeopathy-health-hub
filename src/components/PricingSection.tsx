@@ -129,18 +129,18 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-center px-5 py-3 text-sm font-body font-medium tracking-wide border transition-all duration-200 ${
-                  tier.featured
-                    ? "bg-primary-foreground text-foreground border-primary-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary"
-                    : "bg-foreground text-primary-foreground border-foreground hover:bg-primary hover:border-primary"
-                }`}
-              >
-                Book this consultation
-              </a>
+              <BookingDialog defaultConsultationType={tier.type}>
+                <button
+                  type="button"
+                  className={`text-center px-5 py-3 text-sm font-body font-medium tracking-wide border transition-all duration-200 ${
+                    tier.featured
+                      ? "bg-primary-foreground text-foreground border-primary-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                      : "bg-foreground text-primary-foreground border-foreground hover:bg-primary hover:border-primary"
+                  }`}
+                >
+                  Book this consultation
+                </button>
+              </BookingDialog>
             </div>
           ))}
         </div>
