@@ -43,14 +43,14 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center gap-6">
             <span className="font-mono-ui text-xs text-muted-foreground">587-938-0600</span>
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent transition-all duration-200"
-            >
-              Book Online
-            </a>
+            <BookingDialog>
+              <button
+                type="button"
+                className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent transition-all duration-200"
+              >
+                Book Online
+              </button>
+            </BookingDialog>
           </div>
 
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-foreground" aria-label="Toggle menu">
