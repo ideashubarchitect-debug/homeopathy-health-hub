@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 import { supabase } from "@/integrations/supabase/client";
+
+const EMAILJS_PUBLIC_KEY = "64U6o10aTo7ZEkQWd";
+const EMAILJS_SERVICE_ID = "default_service";
+const EMAILJS_TEMPLATE_ID = "template_fwhdtlu";
+const PRACTITIONER_EMAIL = "naazhomeowellness@gmail.com";
 
 const MODALITY_ROWS = [
   "Temperature", "Weather / Season", "Time of Day", "Motion / Rest", "Position",
