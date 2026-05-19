@@ -194,27 +194,29 @@ const IntakeFlow = ({ onCancel, cancelLabel = "Cancel", defaultConsultationType,
     }
 
     try {
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "intake-patient-confirmation",
-          recipientEmail: d.email,
-          idempotencyKey: `intake-patient-${inserted.id}`,
-          templateData: { name: d.fullName },
-        },
-      });
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "intake-practitioner-notification",
-          recipientEmail: "naazhomeowellness@gmail.com",
-          idempotencyKey: `intake-practitioner-${inserted.id}`,
-          templateData: {
-            name: d.fullName, email: d.email, phone: d.phone,
-            consultationType: d.consultationType, mainComplaint: d.mainComplaint,
-          },
-        },
-      });
+      const sharedParams = {
+        patient_name: d.fullName,
+        patient_email: d.email,
+        patient_phone: d.phone,
+        consultation_type: d.consultationType,
+        main_complaint: d.mainComplaint,
+      };
+      // Confirmation to patient
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { ...sharedParams, to_email: d.email, to_name: d.fullName, reply_to: PRACTITIONER_EMAIL },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
+      // Notification to practitioner
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { ...sharedParams, to_email: PRACTITIONER_EMAIL, to_name: "Geeta", reply_to: d.email },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
     } catch (err) {
-      console.warn("Email dispatch skipped:", err);
+      console.warn("EmailJS dispatch failed:", err);
     }
 
     setSubmitting(false);
