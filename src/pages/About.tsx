@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookingDialog from "@/components/BookingDialog";
 import drGeeta from "@/assets/dr-geeta.jpg";
 import { Award, BookOpen, Heart, Users } from "lucide-react";
 
@@ -61,14 +62,14 @@ const About = () => {
               </div>
 
               <div className="mt-10">
-                <a
-                  href="https://calendly.com/naazhomeowellness/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <BookingDialog>
+                <button
+                  type="button"
                   className="inline-block px-8 py-4 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wide hover:bg-accent hover:text-accent-foreground border border-primary transition-all duration-200"
                 >
                   Book a Consultation with Geeta
-                </a>
+                </button>
+                </BookingDialog>
               </div>
             </div>
           </div>
