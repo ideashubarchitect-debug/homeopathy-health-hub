@@ -2,7 +2,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
-import { supabase } from "@/integrations/supabase/client";
 
 const EMAILJS_PUBLIC_KEY = "64U6o10aTo7ZEkQWd";
 const EMAILJS_SERVICE_ID = "service_b68qqai";
@@ -144,54 +143,6 @@ const IntakeFlow = ({ onCancel, cancelLabel = "Cancel", defaultConsultationType,
     setSubmitting(true);
 
     const d = result.data;
-    const { data: inserted, error } = await supabase.from("intake_submissions").insert({
-      full_name: d.fullName,
-      date_of_birth: d.dateOfBirth || null,
-      age: d.age || null,
-      gender: d.gender || null,
-      address: d.address || null,
-      phone: d.phone,
-      email: d.email,
-      occupation: d.occupation || null,
-      marital_status: d.maritalStatus || null,
-      emergency_contact: d.emergencyContact || null,
-      referred_by: d.referredBy || null,
-      main_complaint: d.mainComplaint,
-      complaint_duration: d.complaintDuration || null,
-      complaint_onset: d.complaintOnset || null,
-      complaint_location: d.complaintLocation || null,
-      complaint_sensation: d.complaintSensation || null,
-      complaint_causation: d.complaintCausation || null,
-      complaint_intensity: d.complaintIntensity || null,
-      complaint_frequency: d.complaintFrequency || null,
-      complaint_associated: d.complaintAssociated || null,
-      complaint_treatment_tried: d.complaintTreatmentTried || null,
-      previous_illnesses: d.previousIllnesses || null,
-      childhood_diseases: d.childhoodDiseases || null,
-      current_medications: d.currentMedications || null,
-      known_allergies: d.knownAllergies || null,
-      family_history: d.familyHistory || null,
-      modalities: modalities,
-      modality_notes: d.modalityNotes || null,
-      fears_phobias: d.fearsPhobias || null,
-      anxiety_triggers: d.anxietyTriggers || null,
-      sleep_quality: d.sleepQuality || null,
-      appetite: d.appetite || null,
-      thirst: d.thirst || null,
-      food_cravings: d.foodCravings || null,
-      perspiration: d.perspiration || null,
-      consultation_type: d.consultationType,
-      consent_given: true,
-      research_opt_out: d.researchOptOut,
-      patient_signature: d.patientSignature,
-    }).select("id").single();
-
-    if (error) {
-      console.error(error);
-      toast.error("Submission failed. Please try again.");
-      setSubmitting(false);
-      return;
-    }
 
     try {
       const sharedParams = {
