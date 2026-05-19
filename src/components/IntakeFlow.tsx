@@ -2,7 +2,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
-import { supabase } from "@/integrations/supabase/client";
 
 const EMAILJS_PUBLIC_KEY = "64U6o10aTo7ZEkQWd";
 const EMAILJS_SERVICE_ID = "service_b68qqai";
